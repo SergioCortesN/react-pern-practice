@@ -12,8 +12,13 @@
   },
   "author": "the lever team",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/SergioCortesN/react-pern-practice/issues"
   },
-  "homepage": "https://github.com/SergioCortesN/react-pern-practice#readme"
+  "homepage": "https://github.com/SergioCortesN/react-pern-practice#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
 }
