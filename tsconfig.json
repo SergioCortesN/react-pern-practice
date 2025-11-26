@@ -11,7 +11,9 @@
         "esModuleInterop": true,
         "declaration": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
-    },
+        "emitDecoratorMetadata": true,
+        "isolatedModules": true,
+        "allowImportingTsExtensions": true
+},
     "include": ["src/**/*.ts"]
 }
