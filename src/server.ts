@@ -4,15 +4,14 @@ import db from './config/db.ts';
 import colors from 'colors';
 
 // Initialize database connection
-async function connectDB() {
+export async function connectDB() {
     try {
         await db.authenticate();
-        console.log('Modelos cargados:', Object.keys(db.models)); // ← Verifica esto
         await db.sync();
-        console.log(colors.green.bold('Database connection established & tables synced'));        
+        //console.log(colors.blue('Conexion existosa a la BD'));        
     } catch (error) {
-        console.log(colors.red.bold('Unable to connect to the database:'));
-        console.log(error);
+        //console.log(error);
+        console.log(colors.red.bold('Hubo un error al conectar a la BD'));
     }
 }
 connectDB();
@@ -24,5 +23,9 @@ const server = express();
 server.use(express.json());
 
 server.use('/api/products', router);
+
+server.get('/api', (req, res) => {
+    res.json({msg: 'Desde API'})
+})
 
 export default server;

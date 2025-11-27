@@ -4,7 +4,9 @@ import Product from '../models/Product.model.ts';
 
 dotenv.config();
 
-const db = new Sequelize(process.env.DATABASE_URL as string);
+const db = new Sequelize(process.env.DATABASE_URL as string, {
+    logging: false,
+});
 
 db.addModels([Product]);
 
